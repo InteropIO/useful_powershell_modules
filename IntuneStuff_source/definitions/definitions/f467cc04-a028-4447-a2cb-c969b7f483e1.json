@@ -1,0 +1,2369 @@
+[
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_disableunicastresponsestomulticastbroadcast",
+    "Name": "DisableUnicastResponsesToMulticastBroadcast",
+    "DisplayName": "Disable Unicast Responses To Multicast Broadcast",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disableunicastresponsestomulticastbroadcast_false",
+          "description": "Unicast Responses Not Blocked",
+          "name": "Unicast Responses Not Blocked",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disableunicastresponsestomulticastbroadcast_true",
+          "description": "Unicast Responses Blocked",
+          "name": "Unicast Responses Blocked",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_enablelogignoredrules",
+    "Name": "EnableLogIgnoredRules",
+    "DisplayName": "Enable Log Ignored Rules",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablelogignoredrules_false",
+          "description": "Disable Logging Of Ignored Rules",
+          "name": "Disable Logging Of Ignored Rules",
+          "displayName": "Disable Logging Of Ignored Rules",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablelogignoredrules_true",
+          "description": "Enable Logging Of Ignored Rules",
+          "name": "Enable Logging Of Ignored Rules",
+          "displayName": "Enable Logging Of Ignored Rules",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_globalportsallowuserprefmerge",
+    "Name": "GlobalPortsAllowUserPrefMerge",
+    "DisplayName": "Global Ports Allow User Pref Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_globalportsallowuserprefmerge_false",
+          "description": "GlobalPortsAllowUserPrefMerge Off",
+          "name": "GlobalPortsAllowUserPrefMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_globalportsallowuserprefmerge_true",
+          "description": "GlobalPortsAllowUserPrefMerge On",
+          "name": "GlobalPortsAllowUserPrefMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_defaultinboundaction",
+    "Name": "DefaultInboundAction",
+    "DisplayName": "Default Inbound Action for Domain Profile",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_defaultinboundaction_0",
+          "description": "Allow Inbound By Default",
+          "name": "Allow Inbound By Default",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_defaultinboundaction_1",
+          "description": "Block Inbound By Default",
+          "name": "Block Inbound By Default",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmodeipsecsecuredpacketexemption",
+    "Name": "DisableStealthModeIpsecSecuredPacketExemption",
+    "DisplayName": "Disable Stealth Mode Ipsec Secured Packet Exemption",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmodeipsecsecuredpacketexemption_false",
+          "description": "FALSE",
+          "name": "FALSE",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmodeipsecsecuredpacketexemption_true",
+          "description": "TRUE",
+          "name": "TRUE",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalpolicymerge",
+    "Name": "AllowLocalPolicyMerge",
+    "DisplayName": "Allow Local Policy Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalpolicymerge_false",
+          "description": "AllowLocalPolicyMerge Off",
+          "name": "AllowLocalPolicyMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalpolicymerge_true",
+          "description": "AllowLocalPolicyMerge On",
+          "name": "AllowLocalPolicyMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_enablelogsuccessconnections",
+    "Name": "EnableLogSuccessConnections",
+    "DisplayName": "Enable Log Success Connections",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablelogsuccessconnections_false",
+          "description": "Disable Logging Of Successful Connections",
+          "name": "Disable Logging Of Successful Connections",
+          "displayName": "Disable Logging Of Successful Connections",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablelogsuccessconnections_true",
+          "description": "Enable Logging Of Successful Connections",
+          "name": "Enable Logging Of Successful Connections",
+          "displayName": "Enable Logging Of Successful Connections",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall",
+    "Name": "EnableFirewall",
+    "DisplayName": "Enable Domain Network Firewall",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_false",
+          "description": "Disable Firewall",
+          "name": "Disable Firewall",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+          "description": "Enable Firewall",
+          "name": "Enable Firewall",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmode",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_shielded",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_disableunicastresponsestomulticastbroadcast",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_enablelogdroppedpackets",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_enablelogsuccessconnections",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_enablelogignoredrules",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_logmaxfilesize",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_logfilepath",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_disableinboundnotifications",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_authappsallowuserprefmerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_globalportsallowuserprefmerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalpolicymerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalipsecpolicymerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_defaultoutboundaction",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_defaultinboundaction",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmodeipsecsecuredpacketexemption",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalipsecpolicymerge",
+    "Name": "AllowLocalIpsecPolicyMerge",
+    "DisplayName": "Allow Local Ipsec Policy Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalipsecpolicymerge_false",
+          "description": "AllowLocalIpsecPolicyMerge Off",
+          "name": "AllowLocalIpsecPolicyMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_allowlocalipsecpolicymerge_true",
+          "description": "AllowLocalIpsecPolicyMerge On",
+          "name": "AllowLocalIpsecPolicyMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_logfilepath",
+    "Name": "LogFilePath",
+    "DisplayName": "Log File Path",
+    "Options": null
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmode",
+    "Name": "DisableStealthMode",
+    "DisplayName": "Disable Stealth Mode",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmode_false",
+          "description": "Use Stealth Mode",
+          "name": "Use Stealth Mode",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disablestealthmode_true",
+          "description": "Disable Stealth Mode",
+          "name": "Disable Stealth Mode",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_authappsallowuserprefmerge",
+    "Name": "AuthAppsAllowUserPrefMerge",
+    "DisplayName": "Auth Apps Allow User Pref Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_authappsallowuserprefmerge_false",
+          "description": "AuthAppsAllowUserPrefMerge Off",
+          "name": "AuthAppsAllowUserPrefMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_authappsallowuserprefmerge_true",
+          "description": "AuthAppsAllowUserPrefMerge On",
+          "name": "AuthAppsAllowUserPrefMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_enablelogdroppedpackets",
+    "Name": "EnableLogDroppedPackets",
+    "DisplayName": "Enable Log Dropped Packets",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablelogdroppedpackets_false",
+          "description": "Disable Logging Of Dropped Packets",
+          "name": "Disable Logging Of Dropped Packets",
+          "displayName": "Disable Logging Of Dropped Packets",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_enablelogdroppedpackets_true",
+          "description": "Enable Logging Of Dropped Packets",
+          "name": "Enable Logging Of Dropped Packets",
+          "displayName": "Enable Logging Of Dropped Packets",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_shielded",
+    "Name": "Shielded",
+    "DisplayName": "Shielded",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_shielded_false",
+          "description": "Shielding Off",
+          "name": "Shielding Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_shielded_true",
+          "description": "Shielding On",
+          "name": "Shielding On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_defaultoutboundaction",
+    "Name": "DefaultOutboundAction",
+    "DisplayName": "Default Outbound Action",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_defaultoutboundaction_0",
+          "description": "Allow Outbound By Default",
+          "name": "Allow Outbound By Default",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_defaultoutboundaction_1",
+          "description": "Block Outbound By Default",
+          "name": "Block Outbound By Default",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_disableinboundnotifications",
+    "Name": "DisableInboundNotifications",
+    "DisplayName": "Disable Inbound Notifications",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disableinboundnotifications_false",
+          "description": "Firewall May Display Notification",
+          "name": "Firewall May Display Notification",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_domainprofile_disableinboundnotifications_true",
+          "description": "Firewall Must Not Display Notification",
+          "name": "Firewall Must Not Display Notification",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_domainprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_domainprofile_logmaxfilesize",
+    "Name": "LogMaxFileSize",
+    "DisplayName": "Log Max File Size",
+    "Options": null
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalipsecpolicymerge",
+    "Name": "AllowLocalIpsecPolicyMerge",
+    "DisplayName": "Allow Local Ipsec Policy Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalipsecpolicymerge_false",
+          "description": "AllowLocalIpsecPolicyMerge Off",
+          "name": "AllowLocalIpsecPolicyMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalipsecpolicymerge_true",
+          "description": "AllowLocalIpsecPolicyMerge On",
+          "name": "AllowLocalIpsecPolicyMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption",
+    "Name": "DisableStealthModeIpsecSecuredPacketExemption",
+    "DisplayName": "Disable Stealth Mode Ipsec Secured Packet Exemption",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption_false",
+          "description": "FALSE",
+          "name": "FALSE",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption_true",
+          "description": "TRUE",
+          "name": "TRUE",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_disableinboundnotifications",
+    "Name": "DisableInboundNotifications",
+    "DisplayName": "Disable Inbound Notifications",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disableinboundnotifications_false",
+          "description": "Firewall May Display Notification",
+          "name": "Firewall May Display Notification",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disableinboundnotifications_true",
+          "description": "Firewall Must Not Display Notification",
+          "name": "Firewall Must Not Display Notification",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_shielded",
+    "Name": "Shielded",
+    "DisplayName": "Shielded",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_shielded_false",
+          "description": "Shielding Off",
+          "name": "Shielding Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_shielded_true",
+          "description": "Shielding On",
+          "name": "Shielding On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalpolicymerge",
+    "Name": "AllowLocalPolicyMerge",
+    "DisplayName": "Allow Local Policy Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalpolicymerge_false",
+          "description": "AllowLocalPolicyMerge Off",
+          "name": "AllowLocalPolicyMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalpolicymerge_true",
+          "description": "AllowLocalPolicyMerge On",
+          "name": "AllowLocalPolicyMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_defaultoutboundaction",
+    "Name": "DefaultOutboundAction",
+    "DisplayName": "Default Outbound Action",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_defaultoutboundaction_0",
+          "description": "Allow Outbound By Default",
+          "name": "Allow Outbound By Default",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_defaultoutboundaction_1",
+          "description": "Block Outbound By Default",
+          "name": "Block Outbound By Default",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge",
+    "Name": "AuthAppsAllowUserPrefMerge",
+    "DisplayName": "Auth Apps Allow User Pref Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge_false",
+          "description": "AuthAppsAllowUserPrefMerge Off",
+          "name": "AuthAppsAllowUserPrefMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge_true",
+          "description": "AuthAppsAllowUserPrefMerge On",
+          "name": "AuthAppsAllowUserPrefMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall",
+    "Name": "EnableFirewall",
+    "DisplayName": "Enable Private Network Firewall",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_false",
+          "description": "Disable Firewall",
+          "name": "Disable Firewall",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+          "description": "Enable Firewall",
+          "name": "Enable Firewall",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmode",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_shielded",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_disableunicastresponsestomulticastbroadcast",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_enablelogdroppedpackets",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_enablelogsuccessconnections",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_enablelogignoredrules",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_logmaxfilesize",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_logfilepath",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_disableinboundnotifications",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_globalportsallowuserprefmerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalpolicymerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_allowlocalipsecpolicymerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_defaultoutboundaction",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_defaultinboundaction",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_enablelogignoredrules",
+    "Name": "EnableLogIgnoredRules",
+    "DisplayName": "Enable Log Ignored Rules",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablelogignoredrules_false",
+          "description": "Disable Logging Of Ignored Rules",
+          "name": "Disable Logging Of Ignored Rules",
+          "displayName": "Disable Logging Of Ignored Rules",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablelogignoredrules_true",
+          "description": "Enable Logging Of Ignored Rules",
+          "name": "Enable Logging Of Ignored Rules",
+          "displayName": "Enable Logging Of Ignored Rules",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_logmaxfilesize",
+    "Name": "LogMaxFileSize",
+    "DisplayName": "Log Max File Size",
+    "Options": null
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_defaultinboundaction",
+    "Name": "DefaultInboundAction",
+    "DisplayName": "Default Inbound Action for Private Profile",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_defaultinboundaction_0",
+          "description": "Allow Inbound By Default",
+          "name": "Allow Inbound By Default",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_defaultinboundaction_1",
+          "description": "Block Inbound By Default",
+          "name": "Block Inbound By Default",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_disableunicastresponsestomulticastbroadcast",
+    "Name": "DisableUnicastResponsesToMulticastBroadcast",
+    "DisplayName": "Disable Unicast Responses To Multicast Broadcast",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disableunicastresponsestomulticastbroadcast_false",
+          "description": "Unicast Responses Not Blocked",
+          "name": "Unicast Responses Not Blocked",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disableunicastresponsestomulticastbroadcast_true",
+          "description": "Unicast Responses Blocked",
+          "name": "Unicast Responses Blocked",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_logfilepath",
+    "Name": "LogFilePath",
+    "DisplayName": "Log File Path",
+    "Options": null
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmode",
+    "Name": "DisableStealthMode",
+    "DisplayName": "Disable Stealth Mode",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmode_false",
+          "description": "Use Stealth Mode",
+          "name": "Use Stealth Mode",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmode_true",
+          "description": "Disable Stealth Mode",
+          "name": "Disable Stealth Mode",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_enablelogsuccessconnections",
+    "Name": "EnableLogSuccessConnections",
+    "DisplayName": "Enable Log Success Connections",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablelogsuccessconnections_false",
+          "description": "Disable Logging Of Successful Connections",
+          "name": "Disable Logging Of Successful Connections",
+          "displayName": "Disable Logging Of Successful Connections",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablelogsuccessconnections_true",
+          "description": "Enable Logging Of Successful Connections",
+          "name": "Enable Logging Of Successful Connections",
+          "displayName": "Enable Logging Of Successful Connections",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_globalportsallowuserprefmerge",
+    "Name": "GlobalPortsAllowUserPrefMerge",
+    "DisplayName": "Global Ports Allow User Pref Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_globalportsallowuserprefmerge_false",
+          "description": "GlobalPortsAllowUserPrefMerge Off",
+          "name": "GlobalPortsAllowUserPrefMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_globalportsallowuserprefmerge_true",
+          "description": "GlobalPortsAllowUserPrefMerge On",
+          "name": "GlobalPortsAllowUserPrefMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_privateprofile_enablelogdroppedpackets",
+    "Name": "EnableLogDroppedPackets",
+    "DisplayName": "Enable Log Dropped Packets",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablelogdroppedpackets_false",
+          "description": "Disable Logging Of Dropped Packets",
+          "name": "Disable Logging Of Dropped Packets",
+          "displayName": "Disable Logging Of Dropped Packets",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_privateprofile_enablelogdroppedpackets_true",
+          "description": "Enable Logging Of Dropped Packets",
+          "name": "Enable Logging Of Dropped Packets",
+          "displayName": "Enable Logging Of Dropped Packets",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_defaultoutboundaction",
+    "Name": "DefaultOutboundAction",
+    "DisplayName": "Default Outbound Action",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_defaultoutboundaction_0",
+          "description": "Allow Outbound By Default",
+          "name": "Allow Outbound By Default",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_defaultoutboundaction_1",
+          "description": "Block Outbound By Default",
+          "name": "Block Outbound By Default",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_disableinboundnotifications",
+    "Name": "DisableInboundNotifications",
+    "DisplayName": "Disable Inbound Notifications",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disableinboundnotifications_false",
+          "description": "Firewall May Display Notification",
+          "name": "Firewall May Display Notification",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disableinboundnotifications_true",
+          "description": "Firewall Must Not Display Notification",
+          "name": "Firewall Must Not Display Notification",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmodeipsecsecuredpacketexemption",
+    "Name": "DisableStealthModeIpsecSecuredPacketExemption",
+    "DisplayName": "Disable Stealth Mode Ipsec Secured Packet Exemption",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmodeipsecsecuredpacketexemption_false",
+          "description": "FALSE",
+          "name": "FALSE",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmodeipsecsecuredpacketexemption_true",
+          "description": "TRUE",
+          "name": "TRUE",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_shielded",
+    "Name": "Shielded",
+    "DisplayName": "Shielded",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_shielded_false",
+          "description": "Shielding Off",
+          "name": "Shielding Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_shielded_true",
+          "description": "Shielding On",
+          "name": "Shielding On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalpolicymerge",
+    "Name": "AllowLocalPolicyMerge",
+    "DisplayName": "Allow Local Policy Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalpolicymerge_false",
+          "description": "AllowLocalPolicyMerge Off",
+          "name": "AllowLocalPolicyMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalpolicymerge_true",
+          "description": "AllowLocalPolicyMerge On",
+          "name": "AllowLocalPolicyMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_authappsallowuserprefmerge",
+    "Name": "AuthAppsAllowUserPrefMerge",
+    "DisplayName": "Auth Apps Allow User Pref Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_authappsallowuserprefmerge_false",
+          "description": "AuthAppsAllowUserPrefMerge Off",
+          "name": "AuthAppsAllowUserPrefMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_authappsallowuserprefmerge_true",
+          "description": "AuthAppsAllowUserPrefMerge On",
+          "name": "AuthAppsAllowUserPrefMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_logfilepath",
+    "Name": "LogFilePath",
+    "DisplayName": "Log File Path",
+    "Options": null
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_defaultinboundaction",
+    "Name": "DefaultInboundAction",
+    "DisplayName": "Default Inbound Action for Public Profile",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_defaultinboundaction_0",
+          "description": "Allow Inbound By Default",
+          "name": "Allow Inbound By Default",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_defaultinboundaction_1",
+          "description": "Block Inbound By Default",
+          "name": "Block Inbound By Default",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_disableunicastresponsestomulticastbroadcast",
+    "Name": "DisableUnicastResponsesToMulticastBroadcast",
+    "DisplayName": "Disable Unicast Responses To Multicast Broadcast",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disableunicastresponsestomulticastbroadcast_false",
+          "description": "Unicast Responses Not Blocked",
+          "name": "Unicast Responses Not Blocked",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disableunicastresponsestomulticastbroadcast_true",
+          "description": "Unicast Responses Blocked",
+          "name": "Unicast Responses Blocked",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_globalportsallowuserprefmerge",
+    "Name": "GlobalPortsAllowUserPrefMerge",
+    "DisplayName": "Global Ports Allow User Pref Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_globalportsallowuserprefmerge_false",
+          "description": "GlobalPortsAllowUserPrefMerge Off",
+          "name": "GlobalPortsAllowUserPrefMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_globalportsallowuserprefmerge_true",
+          "description": "GlobalPortsAllowUserPrefMerge On",
+          "name": "GlobalPortsAllowUserPrefMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_enablelogsuccessconnections",
+    "Name": "EnableLogSuccessConnections",
+    "DisplayName": "Enable Log Success Connections",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablelogsuccessconnections_false",
+          "description": "Disable Logging Of Successful Connections",
+          "name": "Disable Logging Of Successful Connections",
+          "displayName": "Disable Logging Of Successful Connections",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablelogsuccessconnections_true",
+          "description": "Enable Logging Of Successful Connections",
+          "name": "Enable Logging Of Successful Connections",
+          "displayName": "Enable Logging Of Successful Connections",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalipsecpolicymerge",
+    "Name": "AllowLocalIpsecPolicyMerge",
+    "DisplayName": "Allow Local Ipsec Policy Merge",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalipsecpolicymerge_false",
+          "description": "AllowLocalIpsecPolicyMerge Off",
+          "name": "AllowLocalIpsecPolicyMerge Off",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalipsecpolicymerge_true",
+          "description": "AllowLocalIpsecPolicyMerge On",
+          "name": "AllowLocalIpsecPolicyMerge On",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall",
+    "Name": "EnableFirewall",
+    "DisplayName": "Enable Public Network Firewall",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_false",
+          "description": "Disable Firewall",
+          "name": "Disable Firewall",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+          "description": "Enable Firewall",
+          "name": "Enable Firewall",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmode",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_shielded",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_disableunicastresponsestomulticastbroadcast",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_enablelogdroppedpackets",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_enablelogsuccessconnections",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_enablelogignoredrules",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_logmaxfilesize",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_logfilepath",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_disableinboundnotifications",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_authappsallowuserprefmerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_globalportsallowuserprefmerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalpolicymerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_allowlocalipsecpolicymerge",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_defaultoutboundaction",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_defaultinboundaction",
+              "required": false
+            },
+            {
+              "dependedOnBy": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmodeipsecsecuredpacketexemption",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_enablelogdroppedpackets",
+    "Name": "EnableLogDroppedPackets",
+    "DisplayName": "Enable Log Dropped Packets",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablelogdroppedpackets_false",
+          "description": "Disable Logging Of Dropped Packets",
+          "name": "Disable Logging Of Dropped Packets",
+          "displayName": "Disable Logging Of Dropped Packets",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablelogdroppedpackets_true",
+          "description": "Enable Logging Of Dropped Packets",
+          "name": "Enable Logging Of Dropped Packets",
+          "displayName": "Enable Logging Of Dropped Packets",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_enablelogignoredrules",
+    "Name": "EnableLogIgnoredRules",
+    "DisplayName": "Enable Log Ignored Rules",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablelogignoredrules_false",
+          "description": "Disable Logging Of Ignored Rules",
+          "name": "Disable Logging Of Ignored Rules",
+          "displayName": "Disable Logging Of Ignored Rules",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_enablelogignoredrules_true",
+          "description": "Enable Logging Of Ignored Rules",
+          "name": "Enable Logging Of Ignored Rules",
+          "displayName": "Enable Logging Of Ignored Rules",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_logmaxfilesize",
+    "Name": "LogMaxFileSize",
+    "DisplayName": "Log Max File Size",
+    "Options": null
+  },
+  {
+    "Id": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmode",
+    "Name": "DisableStealthMode",
+    "DisplayName": "Disable Stealth Mode",
+    "Options": {
+      "value": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmode_false",
+          "description": "Use Stealth Mode",
+          "name": "Use Stealth Mode",
+          "displayName": "False",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "false"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_publicprofile_disablestealthmode_true",
+          "description": "Disable Stealth Mode",
+          "name": "Disable Stealth Mode",
+          "displayName": "True",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "true"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall_true",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_publicprofile_enablefirewall"
+            }
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  }
+]

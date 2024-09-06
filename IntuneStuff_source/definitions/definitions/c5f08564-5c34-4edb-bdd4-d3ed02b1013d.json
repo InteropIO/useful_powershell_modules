@@ -1,0 +1,84 @@
+[
+  {
+    "Id": "device_vendor_msft_windowsadvancedthreatprotection_onboarding",
+    "Name": "Onboarding",
+    "DisplayName": "Onboarding (Device)",
+    "Options": null
+  },
+  {
+    "Id": "device_vendor_msft_windowsadvancedthreatprotection_offboarding",
+    "Name": "Offboarding",
+    "DisplayName": "Offboarding (Device)",
+    "Options": null
+  },
+  {
+    "Id": "device_vendor_msft_windowsadvancedthreatprotection_onboarding_fromconnector",
+    "Name": "Onboarding",
+    "DisplayName": "Onboarding blob from Connector",
+    "Options": null
+  },
+  {
+    "Id": "device_vendor_msft_windowsadvancedthreatprotection_configurationtype",
+    "Name": "ClientConfigurationPackageType",
+    "DisplayName": "Microsoft Defender for Endpoint client configuration package type",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_windowsadvancedthreatprotection_configurationtype_autofromconnector",
+          "name": "AutoFromConnector",
+          "displayName": "Auto from connector",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "AutoFromConnector"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "device_vendor_msft_windowsadvancedthreatprotection_onboarding_fromconnector",
+              "required": true
+            }
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_windowsadvancedthreatprotection_configurationtype_onboard",
+          "name": "Onboard",
+          "displayName": "Onboard",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "Onboard"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "device_vendor_msft_windowsadvancedthreatprotection_onboarding",
+              "required": true
+            }
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_windowsadvancedthreatprotection_configurationtype_offboard",
+          "name": "Offboard",
+          "displayName": "Offboard",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "value": "Offboard"
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "device_vendor_msft_windowsadvancedthreatprotection_offboarding",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "Count": 3
+    }
+  }
+]

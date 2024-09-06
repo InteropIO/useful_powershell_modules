@@ -1,0 +1,780 @@
+[
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensioninstallblocklist",
+    "Name": "ExtensionInstallBlocklist",
+    "DisplayName": "Control which extensions cannot be installed",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensioninstallblocklist_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensioninstallblocklist_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensioninstallblocklist_extensioninstallblocklistdesc",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensioninstallblocklist_extensioninstallblocklistdesc",
+    "Name": "ExtensionInstallBlocklistDesc",
+    "DisplayName": "Extension IDs the user should be prevented from installing (or * for all) (Device)",
+    "Options": null
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev88.0.705.23~policy~microsoft_edge~httpauthentication_basicauthoverhttpenabled",
+    "Name": "BasicAuthOverHttpEnabled",
+    "DisplayName": "Allow Basic authentication for HTTP",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev88.0.705.23~policy~microsoft_edge~httpauthentication_basicauthoverhttpenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev88.0.705.23~policy~microsoft_edge~httpauthentication_basicauthoverhttpenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authschemes",
+    "Name": "AuthSchemes",
+    "DisplayName": "Supported authentication schemes",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authschemes_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authschemes_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            {
+              "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authschemes_authschemes",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authschemes_authschemes",
+    "Name": "AuthSchemes",
+    "DisplayName": "Supported authentication schemes (Device)",
+    "Options": null
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~nativemessaging_nativemessaginguserlevelhosts",
+    "Name": "NativeMessagingUserLevelHosts",
+    "DisplayName": "Allow user-level native messaging hosts (installed without admin permissions)",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~nativemessaging_nativemessaginguserlevelhosts_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~nativemessaging_nativemessaginguserlevelhosts_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowed",
+    "Name": "InsecurePrivateNetworkRequestsAllowed",
+    "DisplayName": "Specifies whether to allow insecure websites to make requests to more-private network endpoints",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowed_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowed_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_smartscreenenabled",
+    "Name": "SmartScreenEnabled",
+    "DisplayName": "Configure Microsoft Defender SmartScreen",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_smartscreenenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_smartscreenenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev80diff~policy~microsoft_edge~smartscreen_smartscreenpuaenabled",
+    "Name": "SmartScreenPuaEnabled",
+    "DisplayName": "Configure Microsoft Defender SmartScreen to block potentially unwanted apps",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev80diff~policy~microsoft_edge~smartscreen_smartscreenpuaenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev80diff~policy~microsoft_edge~smartscreen_smartscreenpuaenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_preventsmartscreenpromptoverride",
+    "Name": "PreventSmartScreenPromptOverride",
+    "DisplayName": "Prevent bypassing Microsoft Defender SmartScreen prompts for sites",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_preventsmartscreenpromptoverride_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_preventsmartscreenpromptoverride_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_preventsmartscreenpromptoverrideforfiles",
+    "Name": "PreventSmartScreenPromptOverrideForFiles",
+    "DisplayName": "Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_preventsmartscreenpromptoverrideforfiles_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~smartscreen_preventsmartscreenpromptoverrideforfiles_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~typosquattingchecker_typosquattingcheckerenabled",
+    "Name": "TyposquattingCheckerEnabled",
+    "DisplayName": "Configure Edge TyposquattingChecker",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~typosquattingchecker_typosquattingcheckerenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~typosquattingchecker_typosquattingcheckerenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge_internetexplorerintegrationreloadiniemodeallowed",
+    "Name": "InternetExplorerIntegrationReloadInIEModeAllowed",
+    "DisplayName": "Allow unconfigured sites to be reloaded in Internet Explorer mode",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge_internetexplorerintegrationreloadiniemodeallowed_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge_internetexplorerintegrationreloadiniemodeallowed_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_sslerroroverrideallowed",
+    "Name": "SSLErrorOverrideAllowed",
+    "DisplayName": "Allow users to proceed from the HTTPS warning page",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_sslerroroverrideallowed_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_sslerroroverrideallowed_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev117~policy~microsoft_edge_internetexplorerintegrationzoneidentifiermhtfileallowed",
+    "Name": "InternetExplorerIntegrationZoneIdentifierMhtFileAllowed",
+    "DisplayName": "Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev117~policy~microsoft_edge_internetexplorerintegrationzoneidentifiermhtfileallowed_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev117~policy~microsoft_edge_internetexplorerintegrationzoneidentifiermhtfileallowed_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge_browserlegacyextensionpointsblockingenabled",
+    "Name": "BrowserLegacyExtensionPointsBlockingEnabled",
+    "DisplayName": "Enable browser legacy extension point blocking",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge_browserlegacyextensionpointsblockingenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge_browserlegacyextensionpointsblockingenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_siteperprocess",
+    "Name": "SitePerProcess",
+    "DisplayName": "Enable site isolation for every site",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_siteperprocess_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_siteperprocess_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge_edgeenhanceimagesenabled",
+    "Name": "EdgeEnhanceImagesEnabled",
+    "DisplayName": "Enhance images enabled",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge_edgeenhanceimagesenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge_edgeenhanceimagesenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev107~policy~microsoft_edge_websqlaccess",
+    "Name": "WebSQLAccess",
+    "DisplayName": "Force WebSQL to be enabled",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev107~policy~microsoft_edge_websqlaccess_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev107~policy~microsoft_edge_websqlaccess_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge_internetexplorermodetoolbarbuttonenabled",
+    "Name": "InternetExplorerModeToolbarButtonEnabled",
+    "DisplayName": "Show the Reload in Internet Explorer mode button in the toolbar",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge_internetexplorermodetoolbarbuttonenabled_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge_internetexplorermodetoolbarbuttonenabled_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  },
+  {
+    "Id": "device_vendor_msft_policy_config_microsoft_edgev111~policy~microsoft_edge_sharedarraybufferunrestrictedaccessallowed",
+    "Name": "SharedArrayBufferUnrestrictedAccessAllowed",
+    "DisplayName": "Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context",
+    "Options": {
+      "value": [
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev111~policy~microsoft_edge_sharedarraybufferunrestrictedaccessallowed_0",
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 0
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        },
+        {
+          "itemId": "device_vendor_msft_policy_config_microsoft_edgev111~policy~microsoft_edge_sharedarraybufferunrestrictedaccessallowed_1",
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "value": 1
+          },
+          "dependentOn": [
+            
+          ],
+          "dependedOnBy": [
+            
+          ]
+        }
+      ],
+      "Count": 2
+    }
+  }
+]

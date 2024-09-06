@@ -1,10 +1,10 @@
 ﻿#requires -modules Microsoft.Graph.Authentication, Microsoft.Graph.Beta.Devices.CorporateManagement, Microsoft.Graph.Beta.DeviceManagement, Microsoft.Graph.Beta.DeviceManagement.Enrollment
 
-if (!(Get-Module -ListAvailable -Name "newtonsoft.json")) {
-    Install-Module -Name "newtonsoft.json" -Scope CurrentUser -Force
-}
-
-Import-Module "newtonsoft.json" -Scope Local
+#if (!(Get-Module -ListAvailable -Name "newtonsoft.json")) {
+#    Install-Module -Name "newtonsoft.json" -Scope CurrentUser -Force
+#}
+#
+#Import-Module "newtonsoft.json" -Scope Local
 
 function Format-Json([Parameter(Mandatory, ValueFromPipeline)][String] $json) {
     $indent = 0;
@@ -416,27 +416,36 @@ function Get-IntunePolicy1 {
             foreach ($innerpol in $policy)
             {
                 $definition = (Get-MgBetaDeviceManagementConfigurationPolicySetting @param2 -DeviceManagementConfigurationPolicyId $innerpol.id)
+                $blah = @()
                 foreach ($obj1 in $definition)
                 {
                     foreach ($obj2 in $obj1.SettingDefinitions)
                     {
+                        $blah += [pscustomobject]@{
+                            Id = $obj2.Id
+                            Name = $obj2.Name
+                            DisplayName = $obj2.DisplayName
+                            Options = [psobject]$obj2.AdditionalProperties["options"]
+                        }
                         # https://github.com/PowerShell/PowerShell/issues/19185
                         #Write-Host ($obj2.AdditionalProperties.Keys)
-                        #$obj2 | Add-Member options [psobject]$obj2.AdditionalProperties["options"]
-                        #$obj2.options = [psobject]$obj2.AdditionalProperties["options"]
+                        #$obj2 | Add-Member options2 [psobject]$obj2.AdditionalProperties["options"]
+                        #$obj2.options2 = [psobject]$obj2.AdditionalProperties["options"]
 #                        $obj2.CategoryId = 
 #                            [Newtonsoft.Json.JsonConvert]::SerializeObject($obj2.AdditionalProperties["options"])
 #                            # (ConvertTo-Json $obj2.AdditionalProperties["options"] -Depth 20)
                         # doesn't work
                         # $obj2.CategoryId = $obj2.AdditionalProperties["options"]
-                        $obj2.CategoryId = (ConvertTo-Json $obj2.AdditionalProperties["options"] -Depth 20) | Format-Json
+                        #$obj2.CategoryId = (ConvertTo-Json $obj2.AdditionalProperties["options"] -Depth 20) | Format-Json
+                        
                     }
-                    $obj1.SettingDefinitions = [psobject]$obj1.SettingDefinitions
                 }
-                (ConvertTo-Json $definition -Depth 20) | 
+                Write-Host "HERE"
+                (ConvertTo-Json $blah -Depth 20) | 
                 #[Newtonsoft.Json.JsonConvert]::SerializeObject($definition) |
                 Format-Json |
                 Set-Content (".\\" + $innerpol.id + ".json")
+                Write-Host "THERE"
             }
             # https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('d2333905-0c9b-4042-b871-c8799e321cb8')/settings?$expand=settingDefinitions&top=1000
             $endpointSecPol2 = $policy | select -Property id, @{n = 'displayName'; e = { $_.name } }, description, isAssigned, lastModifiedDateTime, roleScopeTagIds, platforms, @{n = 'type'; e = { $_.templateReference.templateFamily } }, templateReference, @{n = 'settings'; e = { $_.settings | % { [PSCustomObject]@{
