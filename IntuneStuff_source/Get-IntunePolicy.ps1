@@ -1,6 +1,28 @@
 ﻿#requires -modules Microsoft.Graph.Authentication, Microsoft.Graph.Beta.Devices.CorporateManagement, Microsoft.Graph.Beta.DeviceManagement, Microsoft.Graph.Beta.DeviceManagement.Enrollment
 
-function Get-IntunePolicy {
+if (!(Get-Module -ListAvailable -Name "newtonsoft.json")) {
+    Install-Module -Name "newtonsoft.json" -Scope CurrentUser -Force
+}
+
+Import-Module "newtonsoft.json" -Scope Local
+
+function Format-Json([Parameter(Mandatory, ValueFromPipeline)][String] $json) {
+    $indent = 0;
+    ($json -Split "`n" | % {
+        if ($_ -match '[\}\]]\s*,?\s*$') {
+            # This line ends with ] or }, decrement the indentation level
+            $indent--
+        }
+        $line = ('  ' * $indent) + $($_.TrimStart() -replace '":  (["{[])', '": $1' -replace ':  ', ': ')
+        if ($_ -match '[\{\[]\s*$') {
+            # This line ends with [ or {, increment the indentation level
+            $indent++
+        }
+        $line
+    }) -Join "`n"
+}
+
+function Get-IntunePolicy1 {
     <#
     .SYNOPSIS
     Function for getting all/subset of Intune (assignable) policies using Graph API.
@@ -94,6 +116,8 @@ function Get-IntunePolicy {
 
         [switch] $flatOutput
     )
+    
+    Write-Host "HI"
 
     if (!(Get-Command Get-MgContext -ErrorAction silentlycontinue) -or !(Get-MgContext)) {
         throw "$($MyInvocation.MyCommand): Authentication needed. Please call Connect-MgGraph."
@@ -380,24 +404,77 @@ function Get-IntunePolicy {
         } else {
             $param = $sharedParam.clone()
             $param.select = ('id', 'name', 'description', 'isAssigned', 'platforms', 'lastModifiedDateTime', 'settingCount', 'roleScopeTagIds', 'templateReference')
-            $param.expand += ",settings"
+            $param.expand += ",settings" # ,settingDefinitions"
             $param.filter = "templateReference/templateFamily ne 'none'"
-            $endpointSecPol2 = Get-MgBetaDeviceManagementConfigurationPolicy @param | select -Property id, @{n = 'displayName'; e = { $_.name } }, description, isAssigned, lastModifiedDateTime, roleScopeTagIds, platforms, @{n = 'type'; e = { $_.templateReference.templateFamily } }, templateReference, @{n = 'settings'; e = { $_.settings | % { [PSCustomObject]@{
+            $policy = (Get-MgBetaDeviceManagementConfigurationPolicy @param)
+            $param2 = @{
+                expand = "settingDefinitions"
+                top = 1000
+            }
+
+            $param2.expand = "settingDefinitions"
+            foreach ($innerpol in $policy)
+            {
+                $definition = (Get-MgBetaDeviceManagementConfigurationPolicySetting @param2 -DeviceManagementConfigurationPolicyId $innerpol.id)
+                foreach ($obj1 in $definition)
+                {
+                    foreach ($obj2 in $obj1.SettingDefinitions)
+                    {
+                        # https://github.com/PowerShell/PowerShell/issues/19185
+                        #Write-Host ($obj2.AdditionalProperties.Keys)
+                        #$obj2 | Add-Member options [psobject]$obj2.AdditionalProperties["options"]
+                        #$obj2.options = [psobject]$obj2.AdditionalProperties["options"]
+#                        $obj2.CategoryId = 
+#                            [Newtonsoft.Json.JsonConvert]::SerializeObject($obj2.AdditionalProperties["options"])
+#                            # (ConvertTo-Json $obj2.AdditionalProperties["options"] -Depth 20)
+                        # doesn't work
+                        # $obj2.CategoryId = $obj2.AdditionalProperties["options"]
+                        $obj2.CategoryId = (ConvertTo-Json $obj2.AdditionalProperties["options"] -Depth 20) | Format-Json
+                    }
+                    $obj1.SettingDefinitions = [psobject]$obj1.SettingDefinitions
+                }
+                (ConvertTo-Json $definition -Depth 20) | 
+                #[Newtonsoft.Json.JsonConvert]::SerializeObject($definition) |
+                Format-Json |
+                Set-Content (".\\" + $innerpol.id + ".json")
+            }
+            # https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('d2333905-0c9b-4042-b871-c8799e321cb8')/settings?$expand=settingDefinitions&top=1000
+            $endpointSecPol2 = $policy | select -Property id, @{n = 'displayName'; e = { $_.name } }, description, isAssigned, lastModifiedDateTime, roleScopeTagIds, platforms, @{n = 'type'; e = { $_.templateReference.templateFamily } }, templateReference, @{n = 'settings'; e = { $_.settings | % { [PSCustomObject]@{
                             # trying to have same settings format a.k.a. name/value as in previous function region
                             Name  = $_.settinginstance.settingDefinitionId
                             Value = $(
                                 # property with setting value isn't always same, try to get the used one
                                 $valuePropertyName = $_.settinginstance | Get-Member -MemberType NoteProperty | ? name -Like "*value" | select -ExpandProperty name
                                 if ($valuePropertyName) {
-                                    # Write-Verbose "Value property $valuePropertyName was found"
-                                    $_.settinginstance.$valuePropertyName
+                                    #Write-Host "Value property $valuePropertyName was found"
+                                    [PSCustomObject]@{
+                                        Definition = $_.settingDefinitions
+                                        Value = $_.settinginstance.$valuePropertyName
+                                    }
                                 } else {
-                                    # Write-Verbose "Value property wasn't found, therefore saving whole object as value"
-                                    $_.settinginstance
+
+                                    $valuePropertyName = $_.settinginstance.AdditionalProperties.Keys -like "*value"
+                                    if ($valuePropertyName)
+                                    {
+                                        #Write-Host "Value property wasn't found, therefore saving whole object as value"
+                                        #Write-Host (ConvertTo-Json $_.settinginstance.AdditionalProperties["choiceSettingValue"] -Depth 20)
+                                        #Write-Host $valuePropertyName
+                                        [PSCustomObject]@{
+                                            Definition = $_.settingDefinitions
+                                            Value = $_.settinginstance.AdditionalProperties[$valuePropertyName]
+                                        }
+                                    }
+                                    else {
+                                    [PSCustomObject]@{
+                                        Definition = $_.settingDefinitions
+                                        Value = $_.settinginstance
+                                    }
+                                    }
                                 }
                             )
                         } } }
             }, settingCount, assignments -ExcludeProperty 'assignments@odata.context', 'settings', 'settings@odata.context', 'technologies', 'name', 'templateReference'
+
             #endregion process: Account Protection policies (just 'Local User Group Membership'), Firewall, Endpoint Detection and Response, Attack Surface Reduction
         }
         $endpointSecPol2 | ? { $_ } | % { $endpointSecurityPolicy += $_ }
